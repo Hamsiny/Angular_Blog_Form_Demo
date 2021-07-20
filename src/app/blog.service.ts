@@ -1,9 +1,22 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Blog } from './models/Blog';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BlogService {
+  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+  getBlogs(): Observable<Blog[]> {
+    return this.http.get<Blog[]>(this.apiUrl);
+  }
+ 
+  getBlogById(blog: Blog): Observable<Blog> {
+    const url = `${this.apiUrl}/${blog.id}`;
+    return this.http.get<Blog>(url);
+  }
 }

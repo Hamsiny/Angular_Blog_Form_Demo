@@ -1,0 +1,9 @@
+.dataitem:hover {
+    /* background-color: #EFEFEF; */
+    color: black;
+}
+
+.dataitem {
+    padding: 5px;
+    color: black;
+}

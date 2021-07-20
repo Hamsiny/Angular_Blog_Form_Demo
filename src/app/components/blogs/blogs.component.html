@@ -1,6 +1,6 @@
-<div className="container mt-4 mx-auto">
-    <h2 className="mb-3">Blog Posts</h2>
+<div class="container mt-4 mx-auto">
+    <h2 class="mb-3">Blog Posts</h2>
     <div id="post" class="mr-3">
-        
+        <app-blog *ngFor="let blog of blogs" [blog]="blog"></app-blog>
     </div>
 </div>
