@@ -1,0 +1,12 @@
+<div *ngIf="blog">
+  <div class="container mt-5">
+    <h2>Blog Detail</h2>
+    <h4 class="mt-4 title">{{ blog.title }}</h4>
+    <h5 class="mt-3">Blog Id: {{ blog.id }}</h5>
+    <p class="mt-3 mb-5">{{ blog.body }}</p>
+    <a routerLink="/blog"
+      ><button class="btn btn-dark mr-3">Back to Blog</button></a
+    >
+    <a routerLink="/"><button class="btn btn-dark">Home</button></a>
+  </div>
+</div>

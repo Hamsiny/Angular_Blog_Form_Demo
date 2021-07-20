@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { FormComponent } from './components/form/form.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BlogComponent } from './components/blog/blog.component';
     BlogsComponent,
     FormComponent,
     BlogComponent,
+    BlogDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
