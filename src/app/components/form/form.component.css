@@ -1,0 +1,36 @@
+.wform {
+    /* padding: 10px; */
+    border: grey 0.5px solid;
+    border-radius: 1%;
+    background-color: #EFEFEF;
+}
+
+.col-7 {
+    padding: 0px;
+}
+
+.col-4 {
+    padding: 0px;
+    margin-right: 1rem;
+}
+
+.formtitle {
+    background-color: #343a40;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.blue {
+    background-color: #39A2DB;
+    border: none;
+}
+
+.blue:hover {
+    background-color: #7C83FD;
+}
+
+.twb {
+    background-color: #EFEFEF;
+}
