@@ -5,11 +5,11 @@
     background-color: #EFEFEF;
 }
 
-.col-7 {
+.col-lg-7 {
     padding: 0px;
 }
 
-.col-4 {
+.col-lg-4 {
     padding: 0px;
     margin-right: 1rem;
 }
@@ -32,5 +32,8 @@
 }
 
 .twb {
+    border: grey 0.5px solid;
+    border-radius: 1%;
     background-color: #EFEFEF;
+    height: 550px;
 }
