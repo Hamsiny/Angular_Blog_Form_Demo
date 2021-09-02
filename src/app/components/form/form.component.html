@@ -4,7 +4,8 @@
       <h3 class="formtitle">Two Way Binding</h3>
       <div class="mt-4 mx-3">
         <p>
-          <strong class="mr-2">Form States:</strong> <strong>{{profileForm.status}}</strong>
+          <strong class="mr-2">Form States:</strong>
+          <strong>{{ profileForm.status }}</strong>
         </p>
         <hr />
         <p><strong class="mr-2">First Name:</strong> {{ firstNameValue }}</p>
@@ -25,7 +26,7 @@
       </div>
     </div>
     <div class="col-lg-7 col-sm-12 mt-4 wform">
-      <h3 class="formtitle">Form</h3>
+      <h3 class="formtitle">Profile</h3>
       <form
         class="mt-4 mx-5 mb-4"
         [formGroup]="profileForm"
@@ -151,6 +152,9 @@
             <div *ngIf="dateOfBirth.errors?.required">
               Date of Birth is required.
             </div>
+            <div *ngIf="dateOfBirth.errors?.dateValidator">
+              Date of Birth should be legal.
+            </div>
           </div>
         </div>
         <div class="form-group">
@@ -170,7 +174,12 @@
             <div *ngIf="comments.errors?.required">Comments is required.</div>
           </div>
         </div>
-        <button [disabled]="profileForm.invalid" id="submitbutton" class="btn btn-dark blue mr-2" type="submit">
+        <button
+          [disabled]="profileForm.invalid"
+          id="submitbutton"
+          class="btn btn-dark blue mr-2"
+          type="submit"
+        >
           Submit
         </button>
         <button id="resetbutton" class="btn btn-dark blue mr-2" type="reset">

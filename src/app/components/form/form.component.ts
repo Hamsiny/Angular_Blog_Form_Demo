@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Profile } from 'src/app/models/Profile';
+import { isError } from 'util';
 
 @Component({
   selector: 'app-form',
@@ -38,7 +39,10 @@ export class FormComponent implements OnInit {
         Validators.maxLength(12),
         Validators.pattern('^[0-9]+$'),
       ]),
-      dateOfBirth: new FormControl('', [Validators.required]),
+      dateOfBirth: new FormControl('', [
+        Validators.required,
+        this.dateValidator,
+      ]),
       comments: new FormControl('', [Validators.required]),
     });
   }
@@ -89,6 +93,22 @@ export class FormComponent implements OnInit {
 
   get commentsValue() {
     return this.profileForm.get('comments').value;
+  }
+
+  dateValidator(control: FormControl) {
+    const inputDate = new Date(control.value);
+    const currentDate = new Date();
+
+    if (
+      inputDate > currentDate ||
+      currentDate.getFullYear() - inputDate.getFullYear() > 100
+    ) {
+      return {
+        isError: true,
+      };
+    }
+
+    return null;
   }
 
   onSubmit() {

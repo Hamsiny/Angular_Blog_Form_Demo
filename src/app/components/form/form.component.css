@@ -37,3 +37,7 @@
     background-color: #EFEFEF;
     height: 550px;
 }
+
+.form-control.ng-invalid.ng-touched {
+    border: #FF3D68 1.5px solid;
+}
