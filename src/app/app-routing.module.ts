@@ -1,3 +1,4 @@
+import { TestImageComponent } from './components/test-image/test-image.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogsComponent },
   { path: 'blog/:id', component: BlogDetailComponent },
   { path: 'form', component: FormComponent },
+  { path: 'testImage', component: TestImageComponent },
 ];
 
 @NgModule({

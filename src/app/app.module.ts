@@ -12,6 +12,8 @@ import { FormComponent } from './components/form/form.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TestImageComponent } from './components/test-image/test-image.component';
+import {NgxImageCompressService} from "ngx-image-compress";
 
 @NgModule({
   declarations: [
@@ -23,9 +25,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormComponent,
     BlogComponent,
     BlogDetailComponent,
+    TestImageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  providers: [NgxImageCompressService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
